@@ -1,0 +1,7 @@
+name: MLGCommand
+main: net.clegames.main.Main
+version: 1.0.0
+author: Clegames
+
+commands:
+  MLG:
