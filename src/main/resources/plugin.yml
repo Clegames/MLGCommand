@@ -1,7 +1,9 @@
 name: MLGCommand
-main: net.clegames.main.Main
-version: 1.0.0
+main: net.clegames.Main
+version: 0.1
 author: Clegames
+authors:
+  - MeowAdorian
 
 commands:
-  MLG:
+  mlg:
