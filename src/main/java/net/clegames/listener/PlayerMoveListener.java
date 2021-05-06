@@ -14,17 +14,15 @@ import java.net.http.WebSocket;
 public class PlayerMoveListener implements Listener {
 
     @EventHandler
-    public void handlePlayerMove(final PlayerMoveEvent event) {
+    public void handlePlayerMove(PlayerMoveEvent playerMoveEvent) {
 
-        Player eventPlayer = event.getPlayer();
+        Player player = playerMoveEvent.getPlayer();
 
-        if (eventPlayer.getLocation().getBlock().getRelative(BlockFace.DOWN).getType() == Material.WATER) {
-            eventPlayer.sendMessage(Main.getDisplayname() + "Du hasst den MLG erfolgreich geschafft§8.");
-            eventPlayer.playSound(eventPlayer.getLocation(), Sound.LEVEL_UP, 10F, 10F);
-            eventPlayer.getLocation().getBlock().getRelative(BlockFace.DOWN).setType(Material.AIR);
+        if (player.getLocation().getBlock().getRelative(BlockFace.DOWN).getType() == Material.WATER) {
 
-
+            player.sendMessage(Main.getDisplayname() + "Du hast den MLG erfolgreich geschafft§8.");
+            player.playSound(player.getLocation(), Sound.LEVEL_UP, 10F, 10F);
+            player.getLocation().getBlock().getRelative(BlockFace.DOWN).setType(Material.AIR);
         }
     }
-
 }
